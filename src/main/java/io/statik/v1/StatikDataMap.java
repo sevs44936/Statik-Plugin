@@ -403,7 +403,7 @@ public class StatikDataMap {
             Map<String, Object> result = new HashMap<String, Object>();
             for (Entry<String, Object> entry : this.map.entrySet()) {
                 Object lastValue = lastMap.get(entry.getKey());
-                if (lastValue == null || !lastValue.equals(entry.getValue()) || entry.getKey() == "serverHash") {
+                if (lastValue == null || !lastValue.equals(entry.getValue())) {
                     result.put(entry.getKey(), entry.getValue());
                 }
             }
